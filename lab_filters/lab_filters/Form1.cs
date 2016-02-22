@@ -33,9 +33,30 @@ namespace lab_filters
         private void инверсияToolStripMenuItem_Click(object sender, EventArgs e)
         {
             InvertFilter filter = new InvertFilter();
-            Bitmap resultImage = filter.processImage(image);
-            pictureBox1.Image = resultImage;
-            pictureBox1.Refresh();
+            backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            image = ((Filters)e.Argument).processImage(image, backgroundWorker1);
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar1.Value = e.ProgressPercentage;
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            pictureBox1.Image = image;
+            pictureBox1.Refresh();
+            progressBar1.Value = 0;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            backgroundWorker1.CancelAsync();
+        }
+
     }
 }
