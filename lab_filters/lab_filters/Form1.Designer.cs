@@ -103,6 +103,7 @@
             this.инверсияToolStripMenuItem.Name = "инверсияToolStripMenuItem";
             this.инверсияToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.инверсияToolStripMenuItem.Text = "Инверсия";
+            this.инверсияToolStripMenuItem.Click += new System.EventHandler(this.инверсияToolStripMenuItem_Click);
             // 
             // Form1
             // 

@@ -29,5 +29,13 @@ namespace lab_filters
                 pictureBox1.Refresh();
             }
         }
+
+        private void инверсияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InvertFilter filter = new InvertFilter();
+            Bitmap resultImage = filter.processImage(image);
+            pictureBox1.Image = resultImage;
+            pictureBox1.Refresh();
+        }
     }
 }
