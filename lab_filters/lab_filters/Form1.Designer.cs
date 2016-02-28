@@ -42,6 +42,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.чёрнобелыйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.собеляToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -101,7 +102,8 @@
             // 
             this.матричныеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.размытиеToolStripMenuItem,
-            this.гауссаToolStripMenuItem});
+            this.гауссаToolStripMenuItem,
+            this.собеляToolStripMenuItem});
             this.матричныеToolStripMenuItem.Name = "матричныеToolStripMenuItem";
             this.матричныеToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.матричныеToolStripMenuItem.Text = "Матричные";
@@ -161,6 +163,13 @@
             this.чёрнобелыйToolStripMenuItem.Text = "Чёрно-белый";
             this.чёрнобелыйToolStripMenuItem.Click += new System.EventHandler(this.чёрнобелыйToolStripMenuItem_Click);
             // 
+            // собеляToolStripMenuItem
+            // 
+            this.собеляToolStripMenuItem.Name = "собеляToolStripMenuItem";
+            this.собеляToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.собеляToolStripMenuItem.Text = "Собеля";
+            this.собеляToolStripMenuItem.Click += new System.EventHandler(this.собеляToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,6 +206,7 @@
         private System.Windows.Forms.ToolStripMenuItem размытиеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem гауссаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem чёрнобелыйToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem собеляToolStripMenuItem;
     }
 }
 

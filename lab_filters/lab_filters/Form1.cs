@@ -75,5 +75,11 @@ namespace lab_filters
             Filters filter = new GrayScaleFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void собеляToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new SobelFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
