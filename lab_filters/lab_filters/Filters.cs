@@ -158,4 +158,49 @@ namespace lab_filters
             kernel[1, 1] = 9;
         }
     }
+
+    class GlassFilter : Filters
+    {
+        private Random rand = new Random();
+        protected override Color calculateNewPixelColor(Bitmap sourceImage, int x, int y)
+        {
+            int k, l;
+            k = Clamp((int)(x + (rand.NextDouble() - 0.5) * 10), 0, sourceImage.Width-1);
+            l = Clamp((int)(y + (rand.NextDouble() - 0.5) * 10), 0, sourceImage.Height-1);
+            Color sourceColor = sourceImage.GetPixel(k, l);
+            Color resultColor = Color.FromArgb(sourceColor.R, sourceColor.G, sourceColor.B);
+
+            return resultColor;
+        }
+    }
+
+    class WavesFilter1 : Filters
+    {
+        protected override Color calculateNewPixelColor(Bitmap sourceImage, int x, int y)
+        {
+            int k, l;
+            k = Clamp((int)(x + 20 * Math.Sin(2 * Math.PI * y / 60)), 0, sourceImage.Width - 1);
+            l = Clamp(y, 0, sourceImage.Height - 1);
+            Color sourceColor = sourceImage.GetPixel(k, l);
+            Color resultColor = Color.FromArgb(sourceColor.R, sourceColor.G, sourceColor.B);
+
+            return resultColor;
+        }
+    }
+
+    class WavesFilter2 : Filters
+    {
+        protected override Color calculateNewPixelColor(Bitmap sourceImage, int x, int y)
+        {
+            int k, l;
+            k = Clamp((int)(x + 20 * Math.Sin(2 * Math.PI * x / 30)), 0, sourceImage.Width - 1);
+            l = Clamp(y, 0, sourceImage.Height - 1);
+            Color sourceColor = sourceImage.GetPixel(k, l);
+            Color resultColor = Color.FromArgb(sourceColor.R, sourceColor.G, sourceColor.B);
+
+            return resultColor;
+        }
+    }
+
+    
 }
