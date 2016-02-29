@@ -115,5 +115,17 @@ namespace lab_filters
                 pictureBox1.Image.Save(dialog.FileName);
             }
         }
+
+        private void переносToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new ShiftFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void поворотНа45ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new TurnFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
