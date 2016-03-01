@@ -45,12 +45,13 @@
             this.стеклоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.волны1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.волны2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.переносToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поворотНа45ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.button1 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.переносToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поворотНа45ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сепияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -78,14 +79,14 @@
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.открытьToolStripMenuItem.Text = "Открыть";
             this.открытьToolStripMenuItem.Click += new System.EventHandler(this.открытьToolStripMenuItem_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
@@ -103,7 +104,8 @@
             // 
             this.точечныеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.инверсияToolStripMenuItem,
-            this.чёрнобелыйToolStripMenuItem});
+            this.чёрнобелыйToolStripMenuItem,
+            this.сепияToolStripMenuItem});
             this.точечныеToolStripMenuItem.Name = "точечныеToolStripMenuItem";
             this.точечныеToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.точечныеToolStripMenuItem.Text = "Точечные";
@@ -111,14 +113,14 @@
             // инверсияToolStripMenuItem
             // 
             this.инверсияToolStripMenuItem.Name = "инверсияToolStripMenuItem";
-            this.инверсияToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.инверсияToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.инверсияToolStripMenuItem.Text = "Инверсия";
             this.инверсияToolStripMenuItem.Click += new System.EventHandler(this.инверсияToolStripMenuItem_Click);
             // 
             // чёрнобелыйToolStripMenuItem
             // 
             this.чёрнобелыйToolStripMenuItem.Name = "чёрнобелыйToolStripMenuItem";
-            this.чёрнобелыйToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.чёрнобелыйToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.чёрнобелыйToolStripMenuItem.Text = "Чёрно-белый";
             this.чёрнобелыйToolStripMenuItem.Click += new System.EventHandler(this.чёрнобелыйToolStripMenuItem_Click);
             // 
@@ -176,23 +178,37 @@
             // стеклоToolStripMenuItem
             // 
             this.стеклоToolStripMenuItem.Name = "стеклоToolStripMenuItem";
-            this.стеклоToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.стеклоToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.стеклоToolStripMenuItem.Text = "Стекло";
             this.стеклоToolStripMenuItem.Click += new System.EventHandler(this.стеклоToolStripMenuItem_Click);
             // 
             // волны1ToolStripMenuItem
             // 
             this.волны1ToolStripMenuItem.Name = "волны1ToolStripMenuItem";
-            this.волны1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.волны1ToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.волны1ToolStripMenuItem.Text = "Волны 1";
             this.волны1ToolStripMenuItem.Click += new System.EventHandler(this.волны1ToolStripMenuItem_Click);
             // 
             // волны2ToolStripMenuItem
             // 
             this.волны2ToolStripMenuItem.Name = "волны2ToolStripMenuItem";
-            this.волны2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.волны2ToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.волны2ToolStripMenuItem.Text = "Волны 2";
             this.волны2ToolStripMenuItem.Click += new System.EventHandler(this.волны2ToolStripMenuItem_Click);
+            // 
+            // переносToolStripMenuItem
+            // 
+            this.переносToolStripMenuItem.Name = "переносToolStripMenuItem";
+            this.переносToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.переносToolStripMenuItem.Text = "Перенос";
+            this.переносToolStripMenuItem.Click += new System.EventHandler(this.переносToolStripMenuItem_Click);
+            // 
+            // поворотНа45ToolStripMenuItem
+            // 
+            this.поворотНа45ToolStripMenuItem.Name = "поворотНа45ToolStripMenuItem";
+            this.поворотНа45ToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.поворотНа45ToolStripMenuItem.Text = "Поворот на 45\'";
+            this.поворотНа45ToolStripMenuItem.Click += new System.EventHandler(this.поворотНа45ToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -228,19 +244,12 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // переносToolStripMenuItem
+            // сепияToolStripMenuItem
             // 
-            this.переносToolStripMenuItem.Name = "переносToolStripMenuItem";
-            this.переносToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.переносToolStripMenuItem.Text = "Перенос";
-            this.переносToolStripMenuItem.Click += new System.EventHandler(this.переносToolStripMenuItem_Click);
-            // 
-            // поворотНа45ToolStripMenuItem
-            // 
-            this.поворотНа45ToolStripMenuItem.Name = "поворотНа45ToolStripMenuItem";
-            this.поворотНа45ToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.поворотНа45ToolStripMenuItem.Text = "Поворот на 45\'";
-            this.поворотНа45ToolStripMenuItem.Click += new System.EventHandler(this.поворотНа45ToolStripMenuItem_Click);
+            this.сепияToolStripMenuItem.Name = "сепияToolStripMenuItem";
+            this.сепияToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.сепияToolStripMenuItem.Text = "Сепия";
+            this.сепияToolStripMenuItem.Click += new System.EventHandler(this.сепияToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -287,6 +296,7 @@
         private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem переносToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem поворотНа45ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem сепияToolStripMenuItem;
     }
 }
 

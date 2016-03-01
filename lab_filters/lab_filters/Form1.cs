@@ -127,5 +127,11 @@ namespace lab_filters
             Filters filter = new TurnFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void сепияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new SepiaFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
