@@ -133,5 +133,11 @@ namespace lab_filters
             Filters filter = new SepiaFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void серыйМирToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GrayWorldFilter filter = new GrayWorldFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
