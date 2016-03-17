@@ -12,7 +12,7 @@ namespace lab_filters
     {
         protected abstract Color calculateNewPixelColor(Bitmap sourceImage, int x, int y);
 
-        public Bitmap processImage(Bitmap sourceImage, BackgroundWorker worker)
+        public virtual Bitmap processImage(Bitmap sourceImage, BackgroundWorker worker)
         {
             Bitmap resultImage = new Bitmap(sourceImage.Width, sourceImage.Height);
             for (int i=0; i<sourceImage.Width;i++)
