@@ -60,6 +60,7 @@
     <Compile Include="GrayScaleFilter.cs" />
     <Compile Include="GrayWorldFilter.cs" />
     <Compile Include="InvertFilter.cs" />
+    <Compile Include="MedianFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SepiaFilter.cs" />

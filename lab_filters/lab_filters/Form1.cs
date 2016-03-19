@@ -139,5 +139,11 @@ namespace lab_filters
             GrayWorldFilter filter = new GrayWorldFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void медианныйToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MedianFilter filter = new MedianFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
