@@ -145,5 +145,17 @@ namespace lab_filters
             MedianFilter filter = new MedianFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void расширениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dilation filter = new Dilation();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void сужениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Erosion filter = new Erosion();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
