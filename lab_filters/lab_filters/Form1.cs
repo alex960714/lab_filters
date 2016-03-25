@@ -157,5 +157,17 @@ namespace lab_filters
             Erosion filter = new Erosion();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void открытиеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Opening filter = new Opening();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void закрытиеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Closing filter = new Closing();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
 }
